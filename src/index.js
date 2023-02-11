@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { InvoicesProvider } from "./context/invoicesContext";
+import { BrowserRouter } from "react-router-dom";
+import { FormProvider } from "./context/formContext";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  // </React.StrictMode>
+  <InvoicesProvider>
+    <BrowserRouter>
+      <FormProvider>
+        <App />
+      </FormProvider>
+    </BrowserRouter>
+  </InvoicesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
