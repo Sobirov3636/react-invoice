@@ -36,6 +36,59 @@ export const InvoiceStatus = styled.div`
       font-size: 1.2rem;
     }
   }
+
+  .status__type {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    &-dot {
+      background-color: red;
+      height: 0.7rem;
+      width: 0.7rem;
+      border: none;
+      border-radius: 10rem;
+    }
+  }
+  .paid {
+    color: #33d69f;
+    background-color: #e8fbf5;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &-dot {
+      background-color: #33d69f;
+    }
+  }
+
+  .pending {
+    color: #ff8f00;
+    background-color: #efe2d1;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &-dot {
+      background-color: #ff8f00;
+    }
+  }
+
+  .draft {
+    color: #373b53;
+    background-color: #f4f5f9;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &-dot {
+      background-color: #373b53;
+    }
+  }
 `;
 
 export const InvoiceInfo = styled.div`
@@ -66,7 +119,7 @@ export const InvoiceInfo = styled.div`
       font-family: inherit;
       font-size: 1.2rem;
       font-weight: inherit;
-      color: $color-primary-light2;
+      color: #858bb2;
     }
   }
 
@@ -74,7 +127,7 @@ export const InvoiceInfo = styled.div`
     font-family: inherit;
     font-size: 1.1rem;
     font-weight: inherit;
-    color: $color-primary-light2;
+    color: #858bb2;
     line-height: 1.4;
   }
 
@@ -92,7 +145,7 @@ export const InvoiceInfo = styled.div`
       flex-direction: column;
 
       &__text1 {
-        color: $color-primary-light2;
+        color: #858bb2;
       }
       &__invoicedate {
         font-size: 1.5rem;
@@ -100,7 +153,7 @@ export const InvoiceInfo = styled.div`
         color: #0c0e16;
       }
       &__text2 {
-        color: $color-primary-light2;
+        color: #858bb2;
         margin-top: 2rem;
       }
       &__paymentdate {
@@ -117,7 +170,7 @@ export const InvoiceInfo = styled.div`
       font-family: inherit;
       font-size: 1.1rem;
       font-weight: inherit;
-      color: $color-primary-light2;
+      color: #858bb2;
 
       &__name {
         font-size: 1.5rem;
@@ -133,7 +186,7 @@ export const InvoiceInfo = styled.div`
       font-family: inherit;
       font-size: 1.2rem;
       font-weight: inherit;
-      color: $color-primary-light2;
+      color: #858bb2;
 
       &__mail {
         font-size: 1.5rem;
@@ -164,7 +217,7 @@ export const InvoiceInfo = styled.div`
         align-items: center;
         grid-column: 1 / 1;
         justify-content: space-between;
-        color: $color-primary-light2;
+        color: #858bb2;
         font-size: 1.1rem;
       }
     }
@@ -181,11 +234,11 @@ export const InvoiceInfo = styled.div`
       }
 
       &__numofqty {
-        color: $color-primary-light2;
+        color: #858bb2;
       }
 
       &__priceamount {
-        color: $color-primary-light2;
+        color: #858bb2;
       }
 
       &__totalamount {
