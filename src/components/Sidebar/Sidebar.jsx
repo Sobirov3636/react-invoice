@@ -16,11 +16,20 @@ import {
   SidebarIcons,
   SidebarLogo,
   LinkSignIn,
+  SignOutSpan,
 } from "./Sidebar.styles";
+import { UserContext } from "../../context/userContext";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Sidebar = () => {
   const { isFormOpen } = useContext(FormContext);
-  console.log({ isFormOpen });
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signOutHandler = async () => {
+    await signOutUser();
+    setCurrentUser(null);
+  };
+
   return (
     <Container>
       <ContainerBox1>
@@ -33,8 +42,11 @@ const Sidebar = () => {
             <MoonIcon src={moon} alt='' />
             <HrLine />
 
-            {/* <AvatarIcon src={avatar} alt='' /> */}
-            <LinkSignIn to='/sign-in'>Sign in</LinkSignIn>
+            {currentUser ? (
+              <SignOutSpan onClick={signOutHandler}>Sign Out</SignOutSpan>
+            ) : (
+              <LinkSignIn to='/auth'>Sign In</LinkSignIn>
+            )}
           </SidebarIcons>
         </SidebarCoponent>
         {isFormOpen && <CreateInvoice />}

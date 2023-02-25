@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { InvoicesProvider } from "./context/invoicesContext";
 import { BrowserRouter } from "react-router-dom";
 import { FormProvider } from "./context/formContext";
+import { UserProvider } from "./context/userContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +16,9 @@ root.render(
   <InvoicesProvider>
     <BrowserRouter>
       <FormProvider>
-        <App />
+        <UserProvider>
+          <App />
+        </UserProvider>
       </FormProvider>
     </BrowserRouter>
   </InvoicesProvider>

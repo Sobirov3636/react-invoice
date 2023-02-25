@@ -55,6 +55,7 @@ export const LinkSignIn = styled(Link)`
   font-size: 1.5rem;
   color: #fff;
   margin: 3rem;
+  cursor: pointer;
 `;
 
 export const HrLine = styled.hr`
@@ -62,4 +63,13 @@ export const HrLine = styled.hr`
   height: 1px;
   border: none;
   background-color: #979797;
+`;
+
+export const SignOutSpan = styled.span`
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 3rem;
+  cursor: pointer;
 `;

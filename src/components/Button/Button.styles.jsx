@@ -22,6 +22,7 @@ export const BaseButton = styled.button`
   padding: 1.7rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 700;
+  text-transform: uppercase;
   background-color: #fff;
   color: #000;
   cursor: pointer;
